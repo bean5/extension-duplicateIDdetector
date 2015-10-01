@@ -1,0 +1,40 @@
+<!doctype html>
+<!--Got the basics of this from https://developer.chrome.com/extensions/options -->
+<!--TODO: Use bootstrap to make pretty and easier to maintain.-->
+	<head>
+		<title>Duplicate ID Detector Settings</title>
+	</head>
+
+	<body>
+		<h1 id="loading">Loading...</h1>
+		<div id="loaded" style="display: none;">
+			<h1>Duplicate ID Detector Settings</h1>
+
+			<h2>Main Settings</h2>
+			<select id="allow_dynamic_checking">
+				<option value="true">Yes</input>
+				<option value="false">No</input>
+			</select>
+			<label for="allow_dynamic_checking">Check for duplicate ids when elements are added dynamically to page.</label>
+
+			<br />
+			<label for="whitelisted_urls">Whitelisted URLs</label>
+			<input type="text" id="whitelisted_urls" placeholder="bitbucket.org, jira.com" id="user_id" value=""></input>
+
+			<br />
+			<label for="blacklisted_urls">Blacklisted URLs</label>
+			<input type="text" id="blacklisted_urls" placeholder="bitbucket.org, jira.com" id="user_id" value=""></input>
+
+			<br />
+			<br />
+			<button id="save">Save</button>
+
+			<br />
+			<div id="status"></div>
+
+			<br />
+			<p>Team Name (A.K.A. The Hackers)</p>
+		</div>
+	</body>
+	<script src="js/options.js"></script>
+</html>
