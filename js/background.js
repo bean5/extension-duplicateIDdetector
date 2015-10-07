@@ -1,6 +1,8 @@
 $(function() {
-  if(!window.location.host.match(/dpccloud.com|bs|localhost|127.0.0.1|^[^.]+$/g) || !!window.location.host.match(/jenkins/g)) //don't run on jenkin sites
-    return;
+  if(!window.location.host.match(/dpccloud.com|bs|localhost|127.0.0.1|^[^.]+$/g) || !!window.location.host.match(/-solr\.|jenkins/g)) { //don't run on jenkin sites nor on solr admin sites
+		console.log('Skipping check for duplicate IDs; page whitelisted.');
+		return;
+	}
 
   var counter = 0;
 
