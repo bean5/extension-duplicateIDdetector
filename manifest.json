@@ -1,5 +1,5 @@
 {
-  "name": "beanm's Duplicate ID Detector",
+  "name": "bean's Duplicate ID Detector",
   "options_page": "options.html",
   "version": "1.1.1",
   "description": "Detects non-unique HTML identifier attributes.",
