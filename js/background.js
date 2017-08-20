@@ -24,6 +24,7 @@ $(function() {
     var duplicate_ids = [];
     $('[id]').map(function(i, el) {
       $id = $(el).attr('id');
+      // do not change the next line as it is critical
       if($('[id="'+$id+'"]').length > 1)
         duplicate_ids.push($id);
     });
